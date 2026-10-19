@@ -4,7 +4,7 @@ A Rails movie-catalog app with full CRUD, sortable index columns, and cloud depl
 
 ## Deployed app
 
-**Live URL:** _(will be updated after Render deploy completes)_
+**Live URL:** https://rottenpotatoes-etq2.onrender.com
 
 ## Features
 
