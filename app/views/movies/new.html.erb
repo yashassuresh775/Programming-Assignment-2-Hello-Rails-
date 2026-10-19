@@ -1,0 +1,17 @@
+<% content_for :title, "New movie" %>
+
+<main class="page">
+  <header class="page-header">
+    <p class="brand">RottenPotatoes</p>
+    <h1>New movie</h1>
+    <p class="lede">Add a title to the catalog.</p>
+  </header>
+
+  <section class="form-card">
+    <%= render "form", movie: @movie %>
+  </section>
+
+  <div class="actions-bar">
+    <%= link_to "Back to movies", movies_path, class: "button secondary" %>
+  </div>
+</main>

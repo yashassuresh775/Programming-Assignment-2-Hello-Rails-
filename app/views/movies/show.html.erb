@@ -1,0 +1,31 @@
+<% content_for :title, @movie.title %>
+
+<main class="page">
+  <header class="page-header">
+    <p class="brand">RottenPotatoes</p>
+    <h1><%= @movie.title %></h1>
+  </header>
+
+  <% if notice.present? %>
+    <p class="notice" role="status"><%= notice %></p>
+  <% end %>
+
+  <article class="detail-card">
+    <dl class="detail-list">
+      <dt>Rating</dt>
+      <dd><span class="badge"><%= @movie.rating %></span></dd>
+
+      <dt>Release Date</dt>
+      <dd><%= @movie.release_date&.strftime("%B %-d, %Y") %></dd>
+
+      <dt>Description</dt>
+      <dd><%= @movie.description.presence || "No description yet." %></dd>
+    </dl>
+  </article>
+
+  <div class="actions-bar">
+    <%= link_to "Edit", edit_movie_path(@movie), class: "button" %>
+    <%= link_to "Back to movies", movies_path, class: "button secondary" %>
+    <%= button_to "Delete", @movie, method: :delete, class: "button danger" %>
+  </div>
+</main>

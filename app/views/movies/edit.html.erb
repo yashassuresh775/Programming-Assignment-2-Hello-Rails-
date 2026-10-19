@@ -1,0 +1,18 @@
+<% content_for :title, "Edit #{@movie.title}" %>
+
+<main class="page">
+  <header class="page-header">
+    <p class="brand">RottenPotatoes</p>
+    <h1>Edit movie</h1>
+    <p class="lede"><%= @movie.title %></p>
+  </header>
+
+  <section class="form-card">
+    <%= render "form", movie: @movie %>
+  </section>
+
+  <div class="actions-bar">
+    <%= link_to "Show", @movie, class: "button" %>
+    <%= link_to "Back to movies", movies_path, class: "button secondary" %>
+  </div>
+</main>
