@@ -1,10 +1,10 @@
 # Programming Assignment 2: Hello Rails (RottenPotatoes)
 
-A Rails movie-catalog app with full CRUD, sortable index columns, and Heroku deployment.
+A Rails movie-catalog app with full CRUD, sortable index columns, and cloud deployment.
 
 ## Deployed app
 
-**Live URL:** _(add after Heroku deploy)_
+**Live URL:** _(will be updated after Render deploy completes)_
 
 ## Features
 
@@ -26,13 +26,11 @@ rails server
 
 Visit http://localhost:3000/ (redirects to `/movies`).
 
-## Heroku deploy
+## Deploy (Render)
 
-```sh
-heroku login
-heroku create
-heroku addons:create heroku-postgresql:essential-0
-heroku config:set RAILS_MASTER_KEY=$(cat config/master.key)
-git push heroku main
-heroku run rails db:seed
-```
+This repo includes `render.yaml` and `bin/render-build.sh` for Render’s free web service + Postgres.
+
+1. Open [Render Blueprints](https://dashboard.render.com/blueprints)
+2. Connect the GitHub repo `yashassuresh775/Programming-Assignment-2-Hello-Rails-`
+3. When prompted, set `RAILS_MASTER_KEY` to the contents of local `config/master.key`
+4. Approve the Blueprint
